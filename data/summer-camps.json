@@ -1,0 +1,43 @@
+{
+  "badge": "",
+  "title": "Wakacyjne Półkolonie Językowe dla dzieci (7-12 lat)",
+  "description": "Wakacje bez nudy przed ekranem? U nas dzieci wracają z uśmiechem, nowymi przyjaciółmi i większą pewnością siebie w angielskim! Zapewniamy rozwój i świetną zabawę.",
+  "benefits": [
+    "Zabawy językowe, ruch i wycieczki",
+    "Projekty plastyczne i seanse filmowe",
+    "Tylko kameralne grupy (max. 10 osób)"
+  ],
+  "image": {
+    "src": "/dzieci/669773586_122129435349129235_3983033651651378526_n.jpg",
+    "alt": "Dzieci na półkoloniach językowych"
+  },
+  "cta": {
+    "label": "Zadzwoń i zapisz: 724 450 287",
+    "href": "tel:724450287"
+  },
+  "pricing": {
+    "enabled": false,
+    "main": "",
+    "secondary": "",
+    "note": ""
+  },
+  "turnsHeading": "Wybierz dogodny termin:",
+  "turns": [
+    {
+      "name": "I Turnus",
+      "date": "6-10 lipca 2026"
+    },
+    {
+      "name": "II Turnus",
+      "date": "13-17 lipca 2026"
+    },
+    {
+      "name": "III Turnus",
+      "date": "27-31 lipca 2026"
+    },
+    {
+      "name": "IV Turnus",
+      "date": "3-7 sierpnia 2026"
+    }
+  ]
+}

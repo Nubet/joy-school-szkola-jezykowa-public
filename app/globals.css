@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-joy-red: #C61A22;
+  --color-joy-light: #FFF0F0;
+  --color-joy-dark: #9B1319;
+  
+  --color-text-main: #1F2937;
+  --color-text-muted: #4B5563;
+
+  --font-sans: var(--font-poppins), sans-serif;
+  --font-heading: var(--font-nunito), sans-serif;
+
+  --shadow-soft: 0 10px 40px -10px rgba(198, 26, 34, 0.1);
+}
+
+@layer utilities {
+  .blob-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFF0F0' d='M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.3,-46.3C90.8,-33.5,96.9,-18,97.4,-2.3C97.9,13.4,92.8,29.3,83.1,42.5C73.4,55.7,59.1,66.2,43.5,73.1C27.9,80,11,83.3,-4.9,80.7C-20.8,78.1,-35.7,69.6,-49.6,60C-63.5,50.4,-76.4,39.7,-83.4,26.1C-90.4,12.5,-91.5,-4,-86.2,-18.2C-80.9,-32.4,-69.2,-44.3,-56.3,-52.3C-43.4,-60.3,-29.3,-64.4,-15.5,-66.9C-1.7,-69.4,11.8,-70.3,25.6,-71.4C39.4,-72.5,53.5,-73.8,44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 80%;
+  }
+
+  .joy-paper-bg {
+    background-color: #fffafa;
+    background-image:
+      linear-gradient(rgba(198, 26, 34, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(198, 26, 34, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .joy-red-paper-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.32) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}

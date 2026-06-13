@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { fetchFiveStarReviews } from "@/lib/services/google-reviews";
 
 function Stars() {
@@ -30,7 +31,7 @@ export async function GoogleReviewsSection() {
   return (
     <section className="py-20 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-12">
+        <Reveal className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-joy-light text-joy-red font-semibold text-sm mb-5">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.7 5.232a1 1 0 00.95.69h5.5c.969 0 1.371 1.24.588 1.81l-4.45 3.232a1 1 0 00-.364 1.118l1.7 5.232c.3.921-.755 1.688-1.539 1.118l-4.45-3.232a1 1 0 00-1.176 0l-4.45 3.232c-.784.57-1.838-.197-1.539-1.118l1.7-5.232a1 1 0 00-.364-1.118L2.307 10.66c-.783-.57-.38-1.81.588-1.81h5.5a1 1 0 00.95-.69l1.704-5.233z" />
@@ -43,12 +44,12 @@ export async function GoogleReviewsSection() {
           <p className="text-text-muted text-lg leading-relaxed">
             Spokojna atmosfera, cierpliwi lektorzy i zajęcia, na które dzieci wracają z uśmiechem.
           </p>
-        </div>
+        </Reveal>
 
         {reviews.length ? (
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <RevealGroup className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {reviews.map((review) => (
-              <article
+              <RevealItem
                 key={review.id}
                 className="bg-gray-50 rounded-[2rem] p-7 shadow-sm border border-gray-100 flex flex-col min-h-full hover:shadow-soft transition-shadow"
               >
@@ -77,11 +78,11 @@ export async function GoogleReviewsSection() {
                     </div>
                   </div>
                 </div>
-              </article>
+              </RevealItem>
             ))}
-          </div>
+          </RevealGroup>
         ) : (
-          <div className="max-w-3xl mx-auto bg-gray-50 rounded-[2rem] p-8 text-center border border-gray-100">
+          <Reveal className="max-w-3xl mx-auto bg-gray-50 rounded-[2rem] p-8 text-center border border-gray-100">
             <div className="w-16 h-16 rounded-3xl bg-joy-light text-joy-red flex items-center justify-center mx-auto mb-5">
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
@@ -93,7 +94,7 @@ export async function GoogleReviewsSection() {
             <p className="text-text-muted">
               Sekcja pojawi się automatycznie po poprawnej konfiguracji GOOGLE_PLACES_API_KEY i GOOGLE_PLACE_ID.
             </p>
-          </div>
+          </Reveal>
         )}
       </div>
     </section>

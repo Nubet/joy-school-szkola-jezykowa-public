@@ -1,20 +1,22 @@
 import Link from 'next/link';
 
+import { Reveal, RevealGroup, RevealItem } from '@/components/motion/Reveal';
+
 export function PricingSection() {
   return (
     <section className="py-24 bg-[#FFF5F5]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <Reveal className="text-center mb-16">
           <h2 className="font-heading text-4xl font-bold text-joy-red mb-4 uppercase tracking-wide">
             Cennik
           </h2>
           <p className="text-text-muted text-lg max-w-2xl mx-auto">
             Zainwestuj w płynność językową swojego dziecka – jasne zasady, stałe postępy i radość z nauki.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white rounded-[2rem] p-8 sm:p-10 shadow-soft">
+        <RevealGroup className="grid md:grid-cols-2 gap-8 mb-16">
+          <RevealItem className="bg-white rounded-[2rem] p-8 sm:p-10 shadow-soft">
             <h3 className="font-heading text-2xl font-black text-text-main uppercase mb-8 text-center tracking-wider">
               Zajęcia Grupowe
             </h3>
@@ -44,9 +46,9 @@ export function PricingSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </RevealItem>
 
-          <div className="bg-white rounded-[2rem] p-8 sm:p-10 shadow-soft relative">
+          <RevealItem className="bg-white rounded-[2rem] p-8 sm:p-10 shadow-soft relative">
             <div className="absolute top-0 right-8 -translate-y-1/2 bg-yellow-400 text-text-main font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
               Personalizacja
             </div>
@@ -79,14 +81,14 @@ export function PricingSection() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </RevealItem>
+        </RevealGroup>
 
         <p className="-mt-10 mb-12 text-sm text-text-muted text-center">
           *Liczba zajęć w tygodniu
         </p>
 
-        <div className="text-center">
+        <Reveal className="text-center" y={16}>
           <Link 
             href="https://forms.gle/t6nvadVB8mWUbMUX7"
             target="_blank" 
@@ -95,7 +97,7 @@ export function PricingSection() {
           >
             Wypełnij formularz zapisów
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

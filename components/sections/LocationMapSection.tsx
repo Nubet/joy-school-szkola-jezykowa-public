@@ -1,3 +1,5 @@
+import { Reveal } from '@/components/motion/Reveal';
+
 const schoolName = "JOY English School";
 const businessType = "Szkoła językowa";
 const address = "Stanisława Staszica 26B, 75-449 Koszalin";
@@ -15,7 +17,7 @@ export function LocationMapSection() {
   return (
     <section id="lokalizacja" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-[2.5rem] overflow-hidden shadow-soft border border-gray-100 h-[500px] sm:h-[600px] bg-gray-50">
+        <Reveal className="relative rounded-[2.5rem] overflow-hidden shadow-soft border border-gray-100 h-[500px] sm:h-[600px] bg-gray-50">
 
           {src ? (
             <iframe
@@ -59,7 +61,7 @@ export function LocationMapSection() {
              </a>
           </div>
           
-        </div>
+        </Reveal>
       </div>
     </section>
   );

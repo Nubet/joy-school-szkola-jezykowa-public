@@ -1,16 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { Reveal, RevealGroup, RevealItem } from '@/components/motion/Reveal';
+
 export function OfferSection() {
   return (
     <section id="oferta" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-3xl font-bold text-center text-text-main mb-12">
+        <Reveal>
+          <h2 className="font-heading text-3xl font-bold text-center text-text-main mb-12">
           Wybierz kurs dla swojego dziecka
-        </h2>
+          </h2>
+        </Reveal>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="border border-gray-100 rounded-[2rem] p-8 shadow-sm hover:shadow-soft transition-shadow bg-white relative overflow-hidden flex flex-col">
+        <RevealGroup className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <RevealItem className="border border-gray-100 rounded-[2rem] p-8 shadow-sm hover:shadow-soft transition-shadow bg-white relative overflow-hidden flex flex-col">
             <div className="absolute top-0 left-0 w-full h-2 bg-joy-red"></div>
             <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden">
               <Image 
@@ -45,9 +49,9 @@ export function OfferSection() {
             <Link href="#kontakt" className="block text-center w-full bg-gray-50 text-text-main font-semibold py-3 rounded-xl hover:bg-gray-100 transition-colors mt-auto">
               Zapytaj o wolne miejsca
             </Link>
-          </div>
+          </RevealItem>
 
-          <div className="border border-gray-100 rounded-[2rem] p-8 shadow-sm hover:shadow-soft transition-shadow bg-white relative overflow-hidden flex flex-col">
+          <RevealItem className="border border-gray-100 rounded-[2rem] p-8 shadow-sm hover:shadow-soft transition-shadow bg-white relative overflow-hidden flex flex-col">
             <div className="absolute top-0 left-0 w-full h-2 bg-yellow-400"></div>
             <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden">
               <Image 
@@ -82,8 +86,8 @@ export function OfferSection() {
             <Link href="#kontakt" className="block text-center w-full bg-gray-50 text-text-main font-semibold py-3 rounded-xl hover:bg-gray-100 transition-colors mt-auto">
               Zapytaj o wolne miejsca
             </Link>
-          </div>
-        </div>
+          </RevealItem>
+        </RevealGroup>
       </div>
     </section>
   );

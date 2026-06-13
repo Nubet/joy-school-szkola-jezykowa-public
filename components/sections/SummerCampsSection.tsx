@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import summerCamps from '@/data/summer-camps.json';
+import { Reveal, RevealGroup, RevealItem } from '@/components/motion/Reveal';
 
 export function SummerCampsSection() {
   const showPricing = summerCamps.pricing.enabled && summerCamps.pricing.main;
@@ -10,9 +11,10 @@ export function SummerCampsSection() {
       <div className="absolute inset-0 opacity-10 joy-red-paper-bg" aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3rem] p-8 lg:p-12">
+        <Reveal className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[3rem] p-8 lg:p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <Reveal className="contents" y={18}>
+              <div>
               {summerCamps.badge ? (
                 <div className="inline-block bg-yellow-400 text-yellow-900 font-bold px-4 py-1.5 rounded-full text-sm mb-6 uppercase tracking-wider">
                   {summerCamps.badge}
@@ -49,7 +51,8 @@ export function SummerCampsSection() {
               <a href={summerCamps.cta.href} className="inline-flex items-center justify-center bg-white text-joy-red px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 shadow-lg transition-all transform hover:-translate-y-1 w-full sm:w-auto">
                 {summerCamps.cta.label}
               </a>
-            </div>
+              </div>
+            </Reveal>
 
             <div className="space-y-6">
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg border-4 border-white/20">
@@ -61,17 +64,17 @@ export function SummerCampsSection() {
                 />
               </div>
               <h3 className="font-heading text-2xl font-bold border-b border-white/20 pb-4">{summerCamps.turnsHeading}</h3>
-              <div className="space-y-4">
+              <RevealGroup className="space-y-4">
                 {summerCamps.turns.map((turn) => (
-                  <div key={`${turn.name}-${turn.date}`} className="bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center gap-4">
+                  <RevealItem key={`${turn.name}-${turn.date}`} className="bg-white/5 p-4 rounded-xl border border-white/10 flex justify-between items-center gap-4">
                     <span className="font-semibold text-lg">{turn.name}</span>
                     <span className="text-white/80 text-right">{turn.date}</span>
-                  </div>
+                  </RevealItem>
                 ))}
-              </div>
+              </RevealGroup>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

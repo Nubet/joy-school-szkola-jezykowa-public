@@ -1,11 +1,13 @@
 import Link from 'next/link';
 
+import { Reveal } from '@/components/motion/Reveal';
+
 export function PhilosophySection() {
   return (
     <section className="py-24 bg-[#FCFBFB] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative">
+          <Reveal className="relative">
             <div className="absolute -top-10 -right-10 w-48 h-48 sm:w-64 sm:h-64 bg-joy-light rounded-full z-0"></div>
             <div className="bg-white rounded-[2.5rem] p-10 sm:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] relative z-10">
               <svg className="w-12 h-12 text-[#F5D5D5] mb-6" fill="currentColor" viewBox="0 0 24 24">
@@ -18,9 +20,9 @@ export function PhilosophySection() {
                 ~ Założycielka JOY English School
               </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:pl-8">
+          <Reveal className="lg:pl-8" delay={0.12}>
             <div className="text-joy-red font-bold text-sm tracking-wider uppercase mb-3">
               Nasza Filozofia
             </div>
@@ -43,7 +45,7 @@ export function PhilosophySection() {
                 </svg>
               </Link>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

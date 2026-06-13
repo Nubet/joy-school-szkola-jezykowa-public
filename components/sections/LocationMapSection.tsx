@@ -17,7 +17,7 @@ export function LocationMapSection() {
   return (
     <section id="lokalizacja" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="relative rounded-[2.5rem] overflow-hidden shadow-soft border border-gray-100 h-[500px] sm:h-[600px] bg-gray-50">
+        <Reveal className="relative rounded-[2.5rem] overflow-hidden shadow-soft border border-gray-100 h-125 sm:h-150 bg-gray-50">
 
           {src ? (
             <iframe

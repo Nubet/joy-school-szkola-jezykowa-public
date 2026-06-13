@@ -21,7 +21,7 @@ export function HeroSection() {
           </Reveal>
           
           <Reveal className="relative lg:ml-10" delay={0.15} y={24}>
-            <div className="absolute -left-5 top-8 z-20 hidden sm:block rounded-3xl bg-white px-5 py-4 shadow-soft border border-red-100 rotate-[-3deg]">
+            <div className="absolute -left-5 top-8 z-20 hidden sm:block rounded-3xl bg-white px-5 py-4 shadow-soft border border-red-100 -rotate-3">
               <div className="text-sm text-text-muted">Adres szkoły</div>
               <div className="font-heading font-extrabold text-joy-red">Staszica 26B</div>
               <div className="text-sm text-text-muted">Koszalin</div>
